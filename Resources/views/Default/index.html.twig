@@ -1,1 +1,46 @@
-Hello {{ name }}!
+<html>
+	<head>
+		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.0.min.css">
+		
+	</head>
+	<body>
+    <div class="span4 columns"> 
+      <h2>Fluid layout</h2> 
+      <p>A flexible fluid or liquid page structure with min- and max-widths and a left-hand sidebar. Great for apps.</p> 
+    </div> 
+    <div class="span12 columns"> 
+      <div class="mini-layout fluid"> 
+        <div class="mini-layout-sidebar"></div> 
+        <div class="mini-layout-body"></div> 
+      </div> 
+<pre class="prettyprint linenums"> 
+&lt;body&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;div class="sidebar"&gt;
+      ...
+    &lt;/div&gt;
+    &lt;div class="content"&gt;
+      ...
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+</pre> 
+    </div> 
+  
+	 <!-- Modal --> 
+        <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"> 
+          <div class="modal-header"> 
+            <h3>Modal Heading</h3> 
+            <a href="#" class="close">&times;</a> 
+          </div> 
+          <div class="modal-body"> 
+            <p>One fine body…</p> 
+          </div> 
+          <div class="modal-footer"> 
+            <a href="#" class="btn primary">Primary</a> 
+            <a href="#" class="btn secondary">Secondary</a> 
+          </div> 
+        </div> 
+     
+	</body>
+</html>
