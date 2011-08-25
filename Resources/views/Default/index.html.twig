@@ -1,71 +1,76 @@
-<html>
-	<head>
-		<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.0.min.css">
-		<link rel="stylesheet" href="{{ asset('bundles/igabootstrap/css/default.css') }}">
-		
-	</head>
-	<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-<body>
-  <div class="topbar-wrapper" style="z-index: 5;"> 
-    <div class="topbar"> 
-      <div class="fill"> 
-        <div class="container"> 
-          <h3><a href="#">Project Name</a></h3> 
-          <ul> 
-            <li class="active"><a href="#">Home</a></li> 
-            <li><a href="#">Link</a></li> 
-            <li><a href="#">Link</a></li> 
-            <li><a href="#">Link</a></li> 
-          </ul> 
-          <form action=""> 
-            <input type="text" placeholder="Search" /> 
-          </form> 
-          <ul class="nav secondary-nav"> 
-            <li class="menu"> 
-              <a href="#" class="menu">Dropdown</a> 
-              <ul class="menu-dropdown"> 
-                <li><a href="#">Secondary link</a></li> 
-                <li><a href="#">Something else here</a></li> 
-                <li class="divider"></li> 
-                <li><a href="#">Another link</a></li> 
-              </ul> 
-            </li> 
-          </ul> 
-        </div> 
-      </div> <!-- /fill --> 
-    </div> <!-- /topbar --> 
-  </div> <!-- topbar-wrapper --> 
+    <!-- Le styles -->
+	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.0.min.css">
+	<link rel="stylesheet" href="{{ asset('bundles/igabootstrap/css/default.css') }}">
+    
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  </head>
 
+  <body>
 
+    <div class="topbar">
+      <div class="fill">
+        <div class="container fixed">
+          <h3><a href="#">Project name</a></h3>
+          <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <div class="container">
 
-  <div class="container main">
-  lkj
-  lj<br>
-  dsf<br>
-  daf
-    ...
-  </div>
-</body>
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit">
+        <h1>Hello, world!</h1>
+        <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        <p><a class="btn primary large">Learn more &raquo;</a></p>
+      </div>
 
-  
- <div style="display:none">
-	 <!-- Modal --> 
-        <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto; z-index: 1"> 
-          <div class="modal-header"> 
-            <h3>Modal Heading</h3> 
-            <a href="#" class="close">&times;</a> 
-          </div> 
-          <div class="modal-body"> 
-            <p>One fine body…</p> 
-          </div> 
-          <div class="modal-footer"> 
-            <a href="#" class="btn primary">Primary</a> 
-            <a href="#" class="btn secondary">Secondary</a> 
-          </div> 
-        </div> 
-  </div>
-	</body>
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span6">
+          <h2>Heading</h2>
+          <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span5">
+          <h2>Heading</h2>
+           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span5">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <footer>
+        <p>&copy; Company 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
 </html>
+
