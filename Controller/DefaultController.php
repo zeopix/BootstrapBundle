@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 class DefaultController extends Controller
 {
+	//this route is just for testing
     /**
      * @Route("/dev/bootstrap")
      * @Template()
