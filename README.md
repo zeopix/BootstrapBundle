@@ -65,4 +65,10 @@ Topbar
 			
 			
 			
+Non-usefull integrations
+------------
+this implementations are not so useful because html code would be faster and clever.
+
+	* Hero billboard
+			{{ bootstrap_hero('hero content') }}
 	

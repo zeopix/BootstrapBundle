@@ -29,6 +29,7 @@ class BootstrapExtension extends \Twig_Extension
             'bootstrap_test' => new \Twig_Function_Method($this, 'renderTest', array('is_safe' => array('html'))),
             'bootstrap_toolbar' => new \Twig_Function_Method($this, 'renderToolbar', array('is_safe' => array('html'))),
             'bootstrap_container' => new \Twig_Function_Method($this, 'renderContainer', array('is_safe' => array('html'))),
+            'bootstrap_hero' => new \Twig_Function_Method($this, 'renderHero', array('is_safe' => array('html'))),
         );
     }
     
@@ -58,7 +59,10 @@ class BootstrapExtension extends \Twig_Extension
     /* FUNCTIONS */
  	public function renderInitialize ($parameters = array()) {
         return $this->container->get('iga_bootstrap.helper')->toolbar($parameters, 'IgaBootstrapBundle:Bootstrap:initialize.html.twig');
-
+  	}
+  	
+ 	public function renderHero ($content = '') {
+        return $this->container->get('iga_bootstrap.helper')->toolbar(array('content' => $content), 'IgaBootstrapBundle:Bootstrap:hero.html.twig');
   	}
   	
  	public function renderContainer ($content) {

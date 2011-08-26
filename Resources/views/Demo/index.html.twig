@@ -26,14 +26,15 @@
 	}) }}
 	
 	
-	{% set content %}
+	{% set wrapper_content %}
 	
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
+      {% set hero_content %}
         <h1>Hello, !</h1>
         <p>Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         <p><a class="btn primary large">Learn more &raquo;</a></p>
-      </div>
+      {% endset %}
+      {{ bootstrap_hero(hero_content) }}
 
       <!-- Example row of columns -->
       <div class="row">
@@ -60,7 +61,7 @@
 
     {% endset %}
 
-	{{ bootstrap_container(content) }}
+	{{ bootstrap_container(wrapper_content) }}
 
   </body>
 </html>
