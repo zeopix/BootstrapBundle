@@ -5,6 +5,9 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class BootstrapExtension extends \Twig_Extension
 {
+  	const BUNDLE_PUBLIC_PATH = 'bundles/igabootstrap';
+  	const LESS_LIBRARY_PATH = "/lib/less/less-1.1.3.min.js";
+  	const BOOTSTRAP_LIBRARY_PATH = "/lib/bootstrap/bootstrap-1.1.0.min.css";
     protected $container;
 
     /**
@@ -55,15 +58,31 @@ class BootstrapExtension extends \Twig_Extension
     
     
     /* FUNCTIONS */
+    
+    
+    //TODO: use twig native helper for assets
+    
+  	public function renderAsset ($assetName) {
+    	static $bundlePath = self::BUNDLE_PUBLIC_PATH;
+    	$assetsHelper = $this->container->get ('templating.helper.assets');
+    
+	    return $assetsHelper->getUrl($bundlePath . $assetName);
+  	}
+  
+ 
  	public function renderInitialize () {
-        return $this->container->get('iga_bootstrap.helper')->toolbar($parameters, 'IgaBootstrapBundle:Bootstrap:initialize.html.twig');
-
+    	$html = '<!--[if lt IE 9]>
+        	     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+            	 <![endif]-->
+             	 <script type="text/javascript" src="' . $this->renderAsset(self::LESS_LIBRARY_PATH) . '"></script>
+             	 <link type="text/css" rel="stylesheet" href="' . $this->renderAsset(self::BOOTSTRAP_LIBRARY_PATH) . '" media="all" />';
+    	return $html;
   	}
     
     
 
     public function renderToolbar($parameters = array(), $name = null)
     {
-        return $this->container->get('iga_bootstrap.helper')->toolbar($parameters, 'IgaBootstrapBundle:Bootstrap:toolbar.html.twig');
+        return $this->container->get('iga_bootstrap.helper')->toolbar($parameters, 'IgaBootstrapBundle::toolbar.html.twig');
     }
 }
