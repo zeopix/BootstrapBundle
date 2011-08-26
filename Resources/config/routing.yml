@@ -1,0 +1,3 @@
+IgaBootstrapBundle_demo_index:
+    pattern: /demo
+    defaults: { _controller: IgaBootstrapBundle:Demo:index }
