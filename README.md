@@ -3,7 +3,9 @@ This bundle is under early development stage.
 
 Objective
 ============
-  Provide an easy way to make a simple and customizable layout using twitter/bootstrap and many helpers.
+  Provide an easy way to make a simple and customizable layout using twitter/bootstrap and many Twig helpers.
+  
+  With bootstrapBundle you will be able to generate accessible layouts for your Symfony2 project with few minutes, this tool is not designed to make a 100% fully customizable layout, but it's a good starting point.
   
   Flat HTML ( no twig helpers ) Generators will be added.
   
