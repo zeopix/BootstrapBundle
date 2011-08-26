@@ -26,8 +26,8 @@
 	}) }}
 	
 	
-    <div class="container">
-
+	{% set content %}
+	
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>Hello, !</h1>
@@ -58,7 +58,9 @@
         <p>&copy; Company 2011</p>
       </footer>
 
-    </div> <!-- /container -->
+    {% endset %}
+
+	{{ bootstrap_container(content) }}
 
   </body>
 </html>

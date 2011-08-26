@@ -34,6 +34,19 @@ Usage
 
 There is a helper for twig templating. 
 
+Simple Fixed layout
+------------
+		
+			{{ bootstrap_container('here the layout html') }}
+
+or
+
+			{% set content %}
+			here your twig code
+			{% endset%}
+			
+			{{ bootstrap_container(content) }}
+			
 Topbar
 ------------
 		
@@ -49,3 +62,7 @@ Topbar
 								}, 
 							'search' : '/path/to/search'
 			}) }}
+			
+			
+			
+	
