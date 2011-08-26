@@ -1,5 +1,3 @@
-this bundle is under early development stage.
-
 This bundle is under early development stage.
 ============
 
