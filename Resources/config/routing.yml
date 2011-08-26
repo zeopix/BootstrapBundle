@@ -1,0 +1,3 @@
+MagicMahouKeenaoBundle_index:
+    pattern:  /
+    defaults: { _controller: IgaBootstrapBundle:Demo:index }

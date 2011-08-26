@@ -6,15 +6,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    {{ initializeBootstrap() }}
 
-    <!-- Le styles -->
-	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.0.min.css">
-	<link rel="stylesheet" href="{{ asset('bundles/igabootstrap/css/default.css') }}">
-    
+    <link rel="stylesheet" href="{{ asset('bundles/igabootstrap/css/default.css') }}">
+
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -24,18 +19,14 @@
 
   <body>
 
-    <div class="topbar">
-      <div class="fill">
-        <div class="container fixed">
-          <h3><a href="#">Project name</a></h3>
-          <ul>
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+   {{ fixedTopBar ({'id':'my_website_top_bar_can_be_accessed_by_js'}) }}
+    <h3><a href="#">Project name</a></h3>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+   {{ endFixedTopBar () }}
 
     <div class="container">
 
@@ -55,9 +46,9 @@
         </div>
         <div class="span5">
           <h2>Heading</h2>
-           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
+        </div>
         <div class="span5">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
