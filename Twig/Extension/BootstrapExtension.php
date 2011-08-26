@@ -55,7 +55,7 @@ class BootstrapExtension extends \Twig_Extension
     
     
     /* FUNCTIONS */
- 	public function renderInitialize () {
+ 	public function renderInitialize ($parameters = array()) {
         return $this->container->get('iga_bootstrap.helper')->toolbar($parameters, 'IgaBootstrapBundle:Bootstrap:initialize.html.twig');
 
   	}
