@@ -26,6 +26,7 @@ class BootstrapExtension extends \Twig_Extension
     {
         return array(
             'bootstrap_test' => new \Twig_Function_Method($this, 'renderTest', array('is_safe' => array('html'))),
+            'bootstrap_toolbar' => new \Twig_Function_Method($this, 'renderToolbar', array('is_safe' => array('html'))),
         );
     }
 
@@ -42,5 +43,10 @@ class BootstrapExtension extends \Twig_Extension
     public function renderTest($parameters = array(), $name = null)
     {
         return $this->container->get('iga_bootstrap.helper')->test($parameters, 'IgaBootstrapBundle::test.html.twig');
+    }
+
+    public function renderToolbar($parameters = array(), $name = null)
+    {
+        return $this->container->get('iga_bootstrap.helper')->toolbar($parameters, 'IgaBootstrapBundle::toolbar.html.twig');
     }
 }

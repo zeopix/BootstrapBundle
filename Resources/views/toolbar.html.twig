@@ -4,8 +4,9 @@
           <h3><a href="#">{{ title }}</a></h3>
           <ul>
             <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+          	{% for key, link in links %}
+			 <li><a href="{{ link }}">{{ key }}</a></li>
+          	{% endfor %}	
           </ul>
         </div>
       </div>

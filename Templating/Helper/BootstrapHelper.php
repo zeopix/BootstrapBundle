@@ -20,6 +20,13 @@ class BootstrapHelper extends Helper
         return $this->templating->render($name, $parameters + array(
         ));
     }
+    
+    public function toolbar($parameters = array(), $name = null)
+    {
+        $name = $name ?: 'IgaBootstrapBundle::toolbar.html.twig';
+        return $this->templating->render($name, $parameters + array(
+        ));
+    }
 
 
     /**
