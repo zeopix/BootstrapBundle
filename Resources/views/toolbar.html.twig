@@ -8,6 +8,11 @@
 			 <li><a href="{{ link }}">{{ key }}</a></li>
           	{% endfor %}	
           </ul>
+          {% if search %}
+          <form action="{{ search }}">
+          	<input type="text" placeholder="Search">
+          </form>
+          {% endif %}
         </div>
       </div>
     </div>

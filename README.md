@@ -1,8 +1,10 @@
 This bundle is under early development stage.
 ============
 
-todo list:
-all
+ToDo
+============
+  *Render **toolbar** items in the same order that they were set using the twig helper.
+  
 
 
 Installation
