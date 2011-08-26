@@ -13,7 +13,17 @@
   <body>
 
 
-	{{ bootstrap_toolbar({ 'title' : 'My proooject', 'links' : { 'Google' : 'http://www.google.com', 'ManyFew' : 'http://www.many-few.com' }, 'search' : '/path/to/search' }) }}
+	{{ bootstrap_toolbar({  'title' : 'My proooject', 
+							'links' : { 
+								'Google' : { 
+									'caption' : 'Google.es',
+									'href' : 'http://www.google.es', 
+									'class' : 'active',
+									'attr' : { 'target' : '_blank'} 
+									}, 
+								'ManyFew' : 'http://www.many-few.com' }, 
+							'search' : '/path/to/search'
+	}) }}
 	
 	
     <div class="container">

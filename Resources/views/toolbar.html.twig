@@ -5,7 +5,11 @@
           <ul>
             <li class="active"><a href="#">Home</a></li>
           	{% for key, link in links %}
+          		{% if link is array %}
+			 <li><a{% if link.href is defined %} href="{{ link.href }}"{% endif %}{% if link.class is defined %} class="{{ link.class}}"{% endif %}{% if link.attr is defined %}{% for attribute, value in link.attr %} {{ attribute }}="{{ value }}"{% endfor %}{% endif %}>{% if link.caption is defined %}{{ link.caption }}{% endif %}</a></li>
+          		{% else %}
 			 <li><a href="{{ link }}">{{ key }}</a></li>
+          		{% endif %}
           	{% endfor %}	
           </ul>
           {% if search %}

@@ -33,6 +33,13 @@ class BootstrapExtension extends \Twig_Extension
             'bootstrap_toolbar' => new \Twig_Function_Method($this, 'renderToolbar', array('is_safe' => array('html'))),
         );
     }
+    
+	public function getTests()
+    {
+        return array(
+            'array'       => new \Twig_Test_Method($this, 'testIsArray'),
+        );
+    }
 
     /**
      * Returns the name of the extension.
@@ -43,6 +50,15 @@ class BootstrapExtension extends \Twig_Extension
     {
         return 'bootstrap';
     }
+    
+    /* TESTS */
+    public function testIsArray($data){
+    	return is_array($data);
+    }
+    
+    
+    /* FUNCTIONS */
+    
     
     //TODO: use twig native helper for assets
     

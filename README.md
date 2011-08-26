@@ -26,4 +26,14 @@ There is a helper for twig templating.
 Topbar
 ------------
 		
-		{{ bootstrap_toolbar({ 'title' : 'My project' , 'links' : { 'ManyFew' : 'http://www.many-few.com' , 'Acme' : 'http://acme.com' } }) }}
+			{{ bootstrap_toolbar({  'title' : 'My proooject', 
+							'links' : { 
+								'Google' : { 
+									'caption' : 'Google.es',
+									'href' : 'http://www.google.es', 
+									'class' : 'active',
+									'attr' : { 'target' : '_blank'} 
+									}, 
+								'ManyFew' : 'http://www.many-few.com' }, 
+							'search' : '/path/to/search'
+			}) }}
