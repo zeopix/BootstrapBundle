@@ -1,0 +1,13 @@
+ <div class="topbar">
+      <div class="fill">
+        <div class="container fixed">
+          <h3><a href="#">{{ title }}</a></h3>
+          <ul>
+            <li class="active"><a href="#">Home</a></li>
+          	{% for key, link in links %}
+			 <li><a href="{{ link }}">{{ key }}</a></li>
+          	{% endfor %}	
+          </ul>
+        </div>
+      </div>
+    </div>

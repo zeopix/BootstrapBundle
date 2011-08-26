@@ -15,4 +15,9 @@ Example in your ``config.yml``:
 Usage
 ============
 
-not yet
+There is a helper for twig templating. 
+
+Topbar
+------------
+		
+		{{ bootstrap_toolbar({ 'title' : 'My project' }) }}

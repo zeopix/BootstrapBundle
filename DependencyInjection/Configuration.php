@@ -20,9 +20,21 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('iga_bootstrap');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
+        $rootNode
+            ->children()
+                    ->arrayNode('helper')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('class')->defaultValue('Iga\BootstrapBundle\Templating\Helper\BootstrapHelper')->end()
+                    ->end()
+                ->end()
+                   	->arrayNode('twig')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('class')->defaultValue('Iga\BootstrapBundle\Twig\Extension\BootstrapExtension')->end()
+                    ->end()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }

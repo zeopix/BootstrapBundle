@@ -6,6 +6,8 @@
     
   <parameters>
     <parameter key="iga.bootstrap.twig.bootstrap.class">Iga\BootstrapBundle\Twig\BootstrapExtension</parameter>
+    <parameter key="iga_bootstrap.helper.class">Iga\BootstrapBundle\Twig\Extension\BootstrapExtension</parameter>
+    <parameter key="iga_bootstrap.twig.class">Iga\BootstrapBundle\Twig\Extension\BootstrapExtension</parameter>
   </parameters>
     
   <services>
@@ -13,5 +15,17 @@
       <tag name="twig.extension" />
       <argument type="service" id="service_container" />
     </service>
+    
+    <service id="iga_bootstrap.helper" class="%iga_bootstrap.helper.class%">
+      <argument type="service" id="templating" />
+      <tag name="templating.helper" alias="bootstrap" />
+    </service>
+        
+
+    <service id="iga_bootstrap.twig" class="%iga_bootstrap.twig.class%">
+      <argument type="service" id="service_container" />
+      <tag name="twig.extension" />
+    </service>
   </services>
+
 </container>
