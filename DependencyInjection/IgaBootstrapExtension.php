@@ -23,6 +23,14 @@ class IgaBootstrapExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+
+		$container->setParameter('iga_bootstrap.helper.class', $config['helper']['class']);
+		$container->setParameter('iga_bootstrap.twig.class', $config['twig']['class']);
+
+
         $loader->load('services.xml');
+        
+
+        
     }
 }
