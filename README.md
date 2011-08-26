@@ -34,6 +34,7 @@ Topbar
 									'class' : 'active',
 									'attr' : { 'target' : '_blank'} 
 									}, 
-								'ManyFew' : 'http://www.many-few.com' }, 
+								'ManyFew' : 'http://www.many-few.com' 
+								}, 
 							'search' : '/path/to/search'
 			}) }}
