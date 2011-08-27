@@ -3,6 +3,8 @@ namespace Iga\BootstrapBundle\Twig\Extension;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
+use Iga\BootstrapBundle\Twig\TokenParser\Container as Twig_Container;
+
 class BootstrapExtension extends \Twig_Extension
 {
     protected $container;
@@ -15,6 +17,12 @@ class BootstrapExtension extends \Twig_Extension
     public function __construct(ContainerInterface $container)
     {
         $this->container = $container;
+    }
+    
+    public function getTokenParsers(){
+    	return array(
+    		'container' => new Twig_Container(),
+    	);
     }
 
     /**

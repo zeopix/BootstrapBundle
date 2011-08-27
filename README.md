@@ -47,6 +47,14 @@ or
 			
 			{{ bootstrap_container(content) }}
 			
+or
+			{% container fixed %}
+			my fixed container html
+			{% endcontainer %}
+			
+			{% container fluid %}
+			my fluid container html
+			{% endcontainer %}
 Topbar
 ------------
 		
